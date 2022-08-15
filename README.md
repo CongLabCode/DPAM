@@ -24,3 +24,7 @@ After installing required software and downloading the DPAM and necessary auxili
 
 ## Usage
 DPAM.py [model name] [output_dir]
+
+## Future improvments
+- Incoperate mmseq and foldseek to accelerate speed of the search
+- Provide server for public usage and integrate with ECOD
