@@ -9,7 +9,7 @@ A domain parser for Alphafold models
 Above software is required to be added to $PATH for smooth execution of the DPAM. 
 ### Database:
 - hhsearch UniRef database (https://wwwuser.gwdg.de/~compbiol/uniclust/2022_02/)
-- pdb70 https://wwwuser.gwdg.de/~compbiol/data/hhsuite/databases/hhsuite_dbs/
+- pdb70 (https://wwwuser.gwdg.de/~compbiol/data/hhsuite/databases/hhsuite_dbs/)
 - ECOD database 
 ### Other auxiliary data required for the software:
 - ECOD map to pdb
