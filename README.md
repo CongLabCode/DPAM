@@ -27,6 +27,7 @@ After installing required software and downloading the DPAM and necessary auxili
 
 ## Usage
 Currently DPAM works on AlphaFold v2 json file and please put json file and model file at the same direstory. 
+
 DPAM.py [model name.cif] [output_dir]
 
 ## Future improvments
