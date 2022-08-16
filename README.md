@@ -15,18 +15,19 @@ Above software is required to be added to $PATH for smooth execution of the DPAM
 - ECOD map to pdb
 - ECOD domain length
 - ECOD domain list (need to decompress)
-- ECOD norms
-- ECOD domain quality 
-- ECOD residue weight
-- ECOD database
+- ECOD norms 
+- ECOD domain info (https://conglab.swmed.edu/DPAM/)
+- ECOD residue weight (https://conglab.swmed.edu/DPAM/)
+- ECOD database (https://conglab.swmed.edu/DPAM/)
+
 Please put the first four files in the same directory as scripts, decompress ECOD domain quality, ECOD residue weight and ECOD database and indicate their locations in the config_file
 
 ## Installation
 After installing required software and downloading the DPAM and necessary auxiliary data, please modify the config_file so DPAM can access the required data. 
 
 ## Usage
-Currently DPAM works on AlphaFold v2 json file
-DPAM.py [model name] [output_dir]
+Currently DPAM works on AlphaFold v2 json file and please put json file and model file at the same direstory. 
+DPAM.py [model name.cif] [output_dir]
 
 ## Future improvments
 - Incoperate mmseq and foldseek to accelerate speed of the search
