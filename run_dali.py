@@ -8,7 +8,6 @@ configs={i.split(':')[0]:i.split(':')[1] for i in configs}
 
 mName=sys.argv[1]
 cwd=os.getcwd()
-print(cwd)
 ecod_database_dir=configs['ecod_database_dir']
 if not os.path.exists('ECOD_database'):
     os.system(f'ln -s {ecod_database_dir} ./ECOD_database')
@@ -16,7 +15,8 @@ if os.path.exists('dali_tmp'):
     os.system('rm -rf dali_tmp')
 os.system('mkdir dali_tmp')
 os.chdir('dali_tmp')
-alldomains=os.listdir(ecod_database_dir)
+with open(script_dir+'/ECOD_length') as f:
+    alldomains=[i.split()[0]+'.pdb' for i in f.readlines()]
 logp=open(f'../{mName}_dali.failed','w')
 outputp=open(f'../{mName}_dali.result','w')
 for domain in alldomains:
