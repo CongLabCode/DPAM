@@ -53,11 +53,9 @@ else:
     print('Unknow format of model detected, please add extension to indicate the format of the model')
 
 progress=check_progress(model,output_dir)
-print(progress)
 if progress!=[]:
     cmds=[f'python {script_dir}/run_hhsearch.py {mName}',f'python {script_dir}/run_dali.py {mName}',f'python {script_dir}/map_hhsearch_to_ecod.py {mName}',f'python {script_dir}/filter_dali.py {mName}',f'python {script_dir}/iterative_dali.py {mName}',f'python {script_dir}/analyze_PDB.py {mName}',f'python {script_dir}/get_support.py {mName}',f'python {script_dir}/get_good_domains.py {mName}',f'python {script_dir}/get_sse.py {mName}',f'python {script_dir}/get_diso.py {mName}',f'python {script_dir}/parse_domains.py {mName}']
     for cmd in cmds[progress-1:]:
-        #        print(cmd)
         os.system(cmd)
     print(f'Domain Parsing for {mName} done')
 else:
