@@ -6,6 +6,7 @@ A domain parser for Alphafold models
 - DaliLite.v5: http://ekhidna2.biocenter.helsinki.fi/dali/
 - Python 3.8 
 - pdbx: https://github.com/soedinglab/pdbx
+
 Above software is required to be added to $PATH for smooth execution of the DPAM. 
 ### Database:
 - hhsearch UniRef database (https://wwwuser.gwdg.de/~compbiol/uniclust/2022_02/)
