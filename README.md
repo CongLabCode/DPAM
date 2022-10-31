@@ -1,5 +1,8 @@
 # DPAM
 A domain parser for Alphafold models
+
+## Updates:
+Fix a bug in step19 which prevents the proper usage of Dali results.
 ## Prerequisites:
 ### Software
 - HH-suite3: https://github.com/soedinglab/hh-suite (enable addss.pl to add secondary structure)
