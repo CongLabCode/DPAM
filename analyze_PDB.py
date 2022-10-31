@@ -82,7 +82,7 @@ for hit in hits:
             words = line.split()
             posi2weight[int(words[0])] = float(words[3])
         fp.close()
-    if os.path.exists(f'ECOD_domain_info/{ecodnum}.info'):
+    if os.path.exists(f'{ECOD_domain_info}/{ecodnum}.info'):
         fp = open(f'{ECOD_doamin_info}/{ecodnum}.info','r')   #ECOD step19 info
         for line in fp:
             words = line.split()
