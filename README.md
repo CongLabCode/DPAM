@@ -1,5 +1,5 @@
 # DPAM
-A domain parser for Alphafold models
+A **D**omain **P**arser for **A**lphafold **M**odels
 
 ## Updates:
 Replace Dali with Foldseek for initial hits searching. (2022-11-30)
