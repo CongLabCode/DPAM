@@ -2,38 +2,43 @@
 A domain parser for Alphafold models
 
 ## Updates:
+Replace Dali with Foldseek for initial hits searching. (2022-11-30)
 Fix a bug in analyze_PDB.py which prevents the proper usage of Dali results. (2022-10-31)
 ## Prerequisites:
-### Software
+### Software and packages
 - HH-suite3: https://github.com/soedinglab/hh-suite (enable addss.pl to add secondary structure)
 - DaliLite.v5: http://ekhidna2.biocenter.helsinki.fi/dali/
 - Python 3.8 
+- Foldseek 
 - pdbx: https://github.com/soedinglab/pdbx
 
-Above software is required to be added to $PATH for smooth execution of the DPAM. 
-### Database:
+Please add above software to environment path for DPAM. 
+### Supporting database:
 - hhsearch UniRef database (https://wwwuser.gwdg.de/~compbiol/uniclust/2022_02/)
 - pdb70 (https://wwwuser.gwdg.de/~compbiol/data/hhsuite/databases/hhsuite_dbs/)
 - ECOD database 
-### Other auxiliary data required for the software:
-- ECOD map to pdb
-- ECOD domain length
-- ECOD domain list (need to decompress)
-- ECOD norms 
-- ECOD domain info (https://conglab.swmed.edu/DPAM/)
-- ECOD residue weight (https://conglab.swmed.edu/DPAM/)
-- ECOD database (https://conglab.swmed.edu/DPAM/)
+  - ECOD ID map to pdb
+  - ECOD domain length
+  - ECOD domain list (need to decompress)
+  - ECOD norms 
+  - ECOD domain quality information
+  - ECOD residue weight in domains 
+  - ECOD domain structures 
 
-Please put the first four files in the same directory as scripts, decompress ECOD domain quality, ECOD residue weight and ECOD database and indicate their locations in the config_file
+We provide a script scripts/download_all_data.sh that can be used to download all of these databases.
+
+`bash scripts/download_all_data.sh <DOWNLOAD_DIR>`
+
+After downloading the databases, please decompress files. All supporting database files should be put in the same directory and the directory should be provided to `DPAM.py` as `<datadir>`. The <datadir> should have the following structure and files. 
+`<datadir>'
 
 ## Installation
-After installing required software and downloading the DPAM and necessary auxiliary data, please modify the config_file so DPAM can access the required data. 
+git clone https://github.com/CongLabCode/DPAM.git
+
 
 ## Usage
-Currently DPAM works on AlphaFold v2 json file and please put json file and model file at the same direstory. 
-
-DPAM.py [model name.cif] [output_dir]
+`python DPAM.py <input_cif/pdb> <input_pae> <accession> <output_dir> <threads> <datadir>`
 
 ## Future improvments
-- Incoperate mmseq and foldseek to accelerate speed of the search
-- Provide server for public usage and integrate with ECOD
+- Incoperate mmseq to improve search speed
+- Provide public server and incoperate with ECOD database 
