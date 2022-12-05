@@ -16,7 +16,7 @@ Fix a bug in analyze_PDB.py which prevents the proper usage of Dali results. (20
 - pdbx: https://github.com/soedinglab/pdbx
 - pdb2fasta (https://zhanggroup.org/pdb2fasta)
 
-Please add above software to environment path for DPAM. 
+Please add above software to environment path for DPAM. We also provide a script check_dependencies.py to check if above programs can be found. 
 ### Supporting database:
 - hhsearch UniRef database (https://wwwuser.gwdg.de/~compbiol/uniclust/2022_02/)
 - pdb70 (https://wwwuser.gwdg.de/~compbiol/data/hhsuite/databases/hhsuite_dbs/)
@@ -29,7 +29,7 @@ Please add above software to environment path for DPAM.
   - ECOD residue weight in domains 
   - ECOD domain structures 
 
-We provide a script scripts/download_all_data.sh that can be used to download all of these databases.
+We provide a script download_all_data.sh that can be used to download all of these databases.
 
 `bash scripts/download_all_data.sh <DOWNLOAD_DIR>`
 
