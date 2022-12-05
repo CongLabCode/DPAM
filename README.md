@@ -3,8 +3,10 @@ A **D**omain **P**arser for **A**lphafold **M**odels
 
 ## Updates:
 Replace Dali with Foldseek for initial hits searching. (2022-11-30)
+
 Fix a bug in analyze_PDB.py which prevents the proper usage of Dali results. (2022-10-31)
 ## Prerequisites:
+
 ### Software and packages
 - HH-suite3: https://github.com/soedinglab/hh-suite (enable addss.pl to add secondary structure)
 - DaliLite.v5: http://ekhidna2.biocenter.helsinki.fi/dali/
