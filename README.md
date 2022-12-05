@@ -12,7 +12,9 @@ Fix a bug in analyze_PDB.py which prevents the proper usage of Dali results. (20
 - DaliLite.v5: http://ekhidna2.biocenter.helsinki.fi/dali/
 - Python 3.8 
 - Foldseek 
+- mkdssp
 - pdbx: https://github.com/soedinglab/pdbx
+- pdb2fasta (https://zhanggroup.org/pdb2fasta)
 
 Please add above software to environment path for DPAM. 
 ### Supporting database:
