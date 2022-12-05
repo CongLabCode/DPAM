@@ -16,7 +16,7 @@ Fix a bug in analyze_PDB.py which prevents the proper usage of Dali results. (20
 - pdbx: https://github.com/soedinglab/pdbx
 - pdb2fasta (https://zhanggroup.org/pdb2fasta)
 
-Please add above software to environment path for DPAM. We also provide a script check_dependencies.py to check if above programs can be found. 
+Please add above software to environment path for DPAM. We also provide a script `check_dependencies.py` to check if above programs can be found. 
 ### Supporting database:
 - hhsearch UniRef database (https://wwwuser.gwdg.de/~compbiol/uniclust/2022_02/)
 - pdb70 (https://wwwuser.gwdg.de/~compbiol/data/hhsuite/databases/hhsuite_dbs/)
