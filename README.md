@@ -38,6 +38,7 @@ After downloading the databases, please decompress files. All supporting databas
 
 ## Installation
 git clone https://github.com/CongLabCode/DPAM.git
+
 conda install -c qianlabcode dpam
 
 ## Usage
