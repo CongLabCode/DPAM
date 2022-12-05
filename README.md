@@ -31,14 +31,14 @@ Please add above software to environment path for DPAM. We also provide a script
 
 We provide a script download_all_data.sh that can be used to download all of these databases.
 
-`bash scripts/download_all_data.sh <DOWNLOAD_DIR>`
+`bash download_all_data.sh <DOWNLOAD_DIR>`
 
 After downloading the databases, please decompress files. All supporting database files should be put in the same directory and the directory should be provided to `DPAM.py` as `<datadir>`. The <datadir> should have the following structure and files. 
 `<datadir>'
 
 ## Installation
 git clone https://github.com/CongLabCode/DPAM.git
-
+conda install -c qianlabcode dpam
 
 ## Usage
 `python DPAM.py <input_cif/pdb> <input_pae> <accession> <output_dir> <threads> <datadir>`
