@@ -23,7 +23,7 @@ Please add above software to environment path for DPAM. We also provide a script
 - ECOD database 
   - ECOD ID map to pdb
   - ECOD domain length
-  - ECOD domain list (need to decompress)
+  - ECOD domain list
   - ECOD norms 
   - ECOD domain quality information
   - ECOD residue weight in domains 
@@ -34,8 +34,20 @@ We provide a script download_all_data.sh that can be used to download all of the
 
 `bash download_all_data.sh <DOWNLOAD_DIR>`
 
-After downloading the databases, please decompress files. All supporting database files should be put in the same directory and the directory should be provided to `DPAM.py` as `<datadir>`. The <datadir> should have the following structure and files. 
-`<datadir>'
+After downloading the databases, please decompress files. All supporting database files should be put in the same directory and the directory should be provided to `DPAM.py` as `<datadir>`. The $datadir should have the following structure and files. 
+
+  $datadir/
+    ECOD70/
+    ecod_domain_info/
+    ECOD_foldseek_DB/
+    ecod_weights/
+    pdb70/
+    UniRef30_2022_02/
+    ecod.latest.domains
+    ECOD_length
+    ECOD_norms
+    ECOD_pdbmap
+    
 
 ## Installation
 git clone https://github.com/CongLabCode/DPAM.git
