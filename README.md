@@ -34,19 +34,19 @@ We provide a script download_all_data.sh that can be used to download all of the
 
 `bash download_all_data.sh <DOWNLOAD_DIR>`
 
-After downloading the databases, please decompress files. All supporting database files should be put in the same directory and the directory should be provided to `DPAM.py` as `<datadir>`. The $datadir should have the following structure and files. 
-
-  $datadir/
-    ECOD70/
-    ecod_domain_info/
-    ECOD_foldseek_DB/
-    ecod_weights/
-    pdb70/
-    UniRef30_2022_02/
-    ecod.latest.domains
-    ECOD_length
-    ECOD_norms
-    ECOD_pdbmap
+After downloading the databases, please decompress files. All supporting database files should be put in the same directory and the directory should be provided to `DPAM.py` as `<datadir>`. The `<datadir>` should have the following structure and files. 
+  
+    <datadir>/
+        ECOD70/
+        ecod_domain_info/
+        ECOD_foldseek_DB/
+        ecod_weights/
+        pdb70/
+        UniRef30_2022_02/
+        ecod.latest.domains
+        ECOD_length
+        ECOD_norms
+        ECOD_pdbmap
     
 
 ## Installation
