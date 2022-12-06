@@ -47,7 +47,7 @@ wget --no-check-certificate "${SOURCE_URL}"  -P "${DOWNLOAD_DIR}"
 
 ### Download ECOD domain list, length, relationship to pdb and normalization
 echo "Downloading other ECOD related data"
-files=("ECOD_norm", "ecod.latest.domains", "ECOD_length", "ECOD_pdbmap")
+files=("ECOD_norms", "ecod.latest.domains", "ECOD_length", "ECOD_pdbmap")
 for str in ${files[@]} 
 do
     SOURCE_URL="https://conglab.swmed.edu/DPAM/${str}"
