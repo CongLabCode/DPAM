@@ -19,7 +19,7 @@ Fix a bug in analyze_PDB.py which prevents the proper usage of Dali results. (20
 Please add above software to environment path for DPAM. We also provide a script `check_dependencies.py` to check if above programs can be found. 
 ### Supporting database:
 - hhsearch UniRef database (https://wwwuser.gwdg.de/~compbiol/uniclust/2022_02/)
-- pdb70 (https://wwwuser.gwdg.de/~compbiol/data/hhsuite/databases/hhsuite_dbs/)
+- pdb70 (https://conglab.swmed.edu/DPAM/pdb70.tgz)
 - ECOD database 
   - ECOD ID map to pdb
   - ECOD domain length
