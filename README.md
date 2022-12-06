@@ -27,7 +27,8 @@ Please add above software to environment path for DPAM. We also provide a script
   - ECOD norms 
   - ECOD domain quality information
   - ECOD residue weight in domains 
-  - ECOD domain structures 
+  - ECOD70 domain structures 
+  - ECOD70 foldseek database
 
 We provide a script download_all_data.sh that can be used to download all of these databases.
 
