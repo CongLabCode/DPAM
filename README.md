@@ -2,7 +2,7 @@
 A **D**omain **P**arser for **A**lphafold **M**odels
 
 ## Updates:
-Upload domain parser results for six model organisms.
+Upload domain parser results for six model organisms.  (2022-12-6)
 
 Replace Dali with Foldseek for initial hits searching. (2022-11-30)
 
