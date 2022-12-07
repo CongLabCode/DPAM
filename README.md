@@ -2,6 +2,8 @@
 A **D**omain **P**arser for **A**lphafold **M**odels
 
 ## Updates:
+Upload domain parser results for six model organisms.
+
 Replace Dali with Foldseek for initial hits searching. (2022-11-30)
 
 Fix a bug in analyze_PDB.py which prevents the proper usage of Dali results. (2022-10-31)
