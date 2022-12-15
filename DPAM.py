@@ -34,7 +34,7 @@ else:
     threads = sys.argv[5]
     datadir = sys.argv[6]
     if basedir[0] != '/':
-        basedir = os.getcwd() + basedir
+        basedir = os.getcwd() + '/' + basedir
     if not os.path.exists(basedir):
         os.system('mkdir ' + basedir)
     if '.cif' == input_struc[-4:]:
