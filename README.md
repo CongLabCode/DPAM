@@ -1,5 +1,6 @@
 # DPAM
 A **D**omain **P**arser for **A**lphafold **M**odels 
+
 DPAM: A Domain Parser for AlphaFold Models （https://www.biorxiv.org/content/10.1101/2022.09.22.509116v1, accepted by Protein Science)
 
 ## Updates:
