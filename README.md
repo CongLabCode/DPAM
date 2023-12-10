@@ -4,7 +4,7 @@ A **D**omain **P**arser for **A**lphafold **M**odels
 DPAM: A Domain Parser for AlphaFold Models （https://www.biorxiv.org/content/10.1101/2022.09.22.509116v1, accepted by Protein Science)
 
 ## Updates:
-A docker image can be dowloaded docker pull conglab/dpam:latest (this is an enhanced version of current DPAM, we will soon update the repository too)
+A docker image can be dowloaded by **docker pull conglab/dpam:latest** (this is an enhanced version of current DPAM, we will soon update the repository too)
 
 Upload domain parser results for six model organisms.  (2022-12-6)
 
