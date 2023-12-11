@@ -4,8 +4,7 @@ A **D**omain **P**arser for **A**lphafold **M**odels
 DPAM: A Domain Parser for AlphaFold Models （https://onlinelibrary.wiley.com/doi/full/10.1002/pro.4548)
 
 ## Updates:
-A docker image for DPAM v2.0 can be dowloaded by **docker pull conglab/dpam:latest** (2023-12-10)
-New version includes domain classification based on ECOD database and addresses over-segmentation for some proteins. 
+A docker image for DPAM v2.0 can be dowloaded by **docker pull conglab/dpam:latest** (2023-12-10). New version includes domain classification based on ECOD database and addresses over-segmentation for some proteins. 
 
 Upload domain parser results for six model organisms.  (2022-12-6)
 
