@@ -103,3 +103,4 @@ The `dataset1/` and `dataset2/` directories include PDB/mmCIF files and json fil
 
 `databases` is the directory uncompressed fromd databases.tar.gz from our lab server. 
 
+Final output should be <dataset>_domins under <INPUT_DIR>. For the example case, it should be test_domains under `example/`
