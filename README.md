@@ -103,4 +103,9 @@ The `dataset1/` and `dataset2/` directories include PDB/mmCIF files and json fil
 
 `databases` is the directory uncompressed fromd databases.tar.gz from our lab server. 
 
-Final output should be <dataset>_domins under <INPUT_DIR>. For the example case, it should be test_domains under `example/`
+### Output
+The pipeline will generate log files for each step for debugging. 
+
+Final output is \<dataset\>_domains under <INPUT_DIR>. 
+
+For the example, it should be test_domains under `example/`. 
