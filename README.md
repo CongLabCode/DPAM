@@ -4,18 +4,21 @@ A **D**omain **P**arser for **A**lphafold **M**odels
 DPAM: A Domain Parser for AlphaFold Models （https://onlinelibrary.wiley.com/doi/full/10.1002/pro.4548)
 
 ## Updates:
-A docker image for DPAM v2.0 can be dowloaded by **docker pull conglab/dpam:latest** (2023-12-10). New version includes domain classification based on ECOD database and addresses over-segmentation for some proteins. 
+A docker image for DPAM v2.0 can be dowloaded by **docker pull conglab/dpam:latest** and previous version (v1.0) is moved to v1.0 directory (2023-12-10) . New version includes domain classification based on ECOD database and addresses over-segmentation for some proteins. 
 
 Upload domain parser results for six model organisms.  (2022-12-6)
 
 Replace Dali with Foldseek for initial hits searching. (2022-11-30)
 
 Fix a bug in analyze_PDB.py which prevents the proper usage of Dali results. (2022-10-31)
-## Prerequisites: 
-docker image conglab/dpam:latest 
-run_dpam_docker.py 
+## Prerequisites (required): 
+Docker 
 
-### Software and packages used by DPAM
+Python3
+
+[Databases and supporting files](https://conglab.swmed.edu/DPAM/databases.tar.gz)
+
+### Software and packages used by DPAM (already installed in the docker image)
 - HH-suite3: https://github.com/soedinglab/hh-suite (enable addss.pl to add secondary structure)
 - DaliLite.v5: http://ekhidna2.biocenter.helsinki.fi/dali/
 - Python 3.7
@@ -28,30 +31,21 @@ run_dpam_docker.py
 
 ### Supporting databases for DPAM:
 
-The databases required for DPAM and all other supporting files can be download from our lab sever https://conglab.swmed.edu/DPAM/. 
-  
-It includes the following databases and files. </p>
-- hhsearch UniRef database (https://wwwuser.gwdg.de/~compbiol/uniclust/2022_02/)
-- pdb70 (https://conglab.swmed.edu/DPAM/pdb70.tgz)
-- ECOD database 
-  - ECOD ID map to pdb
-  - ECOD domain length
-  - ECOD domain list
-  - ECOD norms 
-  - ECOD domain quality information
-  - ECOD residue weight in domains 
-  - ECOD70 domain structures 
-  - ECOD70 foldseek database
-
-The databases required for DPAM and all other supporting files can be download from our lab web https://conglab.swmed.edu/DPAM/
+The databases necessary for DPAM, along with all supporting files, are available for download from our lab server at [https://conglab.swmed.edu/DPAM/](https://conglab.swmed.edu/DPAM/). The compressed file size is approximately 89GB, while the size of the databases when uncompressed reaches around 400GB. It is essential to ensure that you have sufficient hard drive space to accommodate these databases. Additionally, due to their substantial size, downloading these databases might require several hours to a few days, depending on your internet connection speed.
 
 After downloading the databases, please decompress files. All databases and supporting files should be put in the same directory and the directory should be provided to `run_dpam_docker.py` 
     
 ## Installation
-**docker pull conglab/dpam:latest**
+    docker pull conglab/dpam:latest
+    git clone https://github.com/CongLabCode/DPAM
+    wget https://conglab.swmed.edu/DPAM/databases.tar.gz
+    tar -xzf databases.tar.gz
+
+### Quick test
+`python run_dpam_docker.py --dataset test --input_dir example  --databases_dir databases --threads 32`
 
 ## Usage
-<pre>run_dpam_docker.py [-h] --databases_dir DATABASES_DIR --input_dir
+<pre>python run_dpam_docker.py [-h] --databases_dir DATABASES_DIR --input_dir
                     INPUT_DIR --dataset DATASET
                     [--image_name IMAGE_NAME] [--threads THREADS]
                     [--log_file LOG_FILE]</pre>
@@ -62,7 +56,7 @@ After downloading the databases, please decompress files. All databases and supp
   Show this help message and exit. Use this argument if you need information about different command options.
 
 - `--databases_dir DATABASES_DIR`  
-  **(Required)** Specify the path to the databases directory that needs to be mounted.
+  **(Required)** Specify the path to the databases directory (downloaded before and uncompressed) that needs to be mounted to the docker. Please make sure you download the databases before running
 
 - `--input_dir INPUT_DIR`  
   **(Required)** Specify the path to the input directory that needs to be mounted.
@@ -84,22 +78,22 @@ After downloading the databases, please decompress files. All databases and supp
 Before running the wrapper, the `INPUT_DIR` needs to be in the following structure:
     
     <INPUT_DIR>/
-        dataset1/
-        dataset1_struc.list
-        dataset2/
-        dataset2_struc.list
+        <dataset1>/
+        <dataset1>_struc.list
+        <dataset2>/
+        <dataset2>_struc.list
         ...
 
 
-The `dataset1/` and `dataset2/` directories include PDB/mmCIF files and json file for PAE and `dataset1_struc.list` and `dataset2_struc.list` include targets (prefix of PDB/mmCIF and json), one line per one target.
+The `<dataset1>/` and `<dataset2>/` directories include PDB/mmCIF files and json file for PAE and `dataset1_struc.list` and `dataset2_struc.list` include targets (prefix of PDB/mmCIF and json), one line per one target. <dataset> can be any name and postfix _struc.list has to be maintained. 
 
-`example/` is provided.
+In the example test in **Quick test** above, 
 
-`example/` is considered `<INPUT_DIR>` and `test` under `example/` is considered as `<dataset>`
+`example/` is `<INPUT_DIR>` and `test` under `example/` is `<dataset>`
 
 **exmaple command**:
 
-`python ./run_dpam_docker.py --dataset test --input_dir example  --databases_dir databases --threads 32`
+`python run_dpam_docker.py --dataset test --input_dir example  --databases_dir databases --threads 32`
 
 `databases` is the directory uncompressed fromd databases.tar.gz from our lab server. 
 
@@ -108,4 +102,4 @@ The pipeline will generate log files for each step for debugging.
 
 Final output is \<dataset\>_domains under <INPUT_DIR>. 
 
-For the example, it should be test_domains under `example/`. 
+For the example, it should be `test_domains` under `example/`. 
