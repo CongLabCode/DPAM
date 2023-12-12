@@ -12,9 +12,7 @@ Replace Dali with Foldseek for initial hits searching. (2022-11-30)
 
 Fix a bug in analyze_PDB.py which prevents the proper usage of Dali results. (2022-10-31)
 ## Prerequisites (required): 
-Docker 
-
-conglab/dpam:latest (docker image)
+Docker/Singularity
 
 Python3
 
@@ -27,13 +25,33 @@ The databases necessary for DPAM, along with all supporting files, are available
 After downloading the databases.tar.gz, please decompress the file. And the directory(`[download_path]/databases`) must be provided to `run_dpam_docker.py` as `--databases_dir`
     
 ## Installation
+For Docker:
+    
     docker pull conglab/dpam:latest
     git clone https://github.com/CongLabCode/DPAM
+    cd ./DPAM
     wget https://conglab.swmed.edu/DPAM/databases.tar.gz
     tar -xzf databases.tar.gz
 
+For Singularity:
+
+    git clone https://github.com/CongLabCode/DPAM
+    cd ./DPAM
+    wget https://conglab.swmed.edu/DPAM/databases.tar.gz
+    tar -xzf databases.tar.gz
+    singularity pull dpam.sif docker://conglab/dpam
+    
+    
+    
+
 ### Quick test
-`python run_dpam_docker.py --dataset test --input_dir example  --databases_dir databases --threads 32`
+For Docker:
+
+    python run_dpam_docker.py --dataset test --input_dir example  --databases_dir databases --threads 32
+
+For Singularity:
+
+    python ./run_dpam_singularity.py --databases_dir databases --input_dir example --dataset test --threads 32 --image_name dpam.sif`
 
 ## Usage
 <pre>python run_dpam_docker.py [-h] --databases_dir DATABASES_DIR --input_dir
