@@ -14,20 +14,11 @@ Fix a bug in analyze_PDB.py which prevents the proper usage of Dali results. (20
 ## Prerequisites (required): 
 Docker 
 
+conglab/dpam:latest (docker image)
+
 Python3
 
 [Databases and supporting files](https://conglab.swmed.edu/DPAM/databases.tar.gz)
-
-### Software and packages used by DPAM (already installed in the docker image)
-- HH-suite3: https://github.com/soedinglab/hh-suite (enable addss.pl to add secondary structure)
-- DaliLite.v5: http://ekhidna2.biocenter.helsinki.fi/dali/
-- Python 3.7
-- Foldseek 
-- mkdssp
-- pdbx: https://github.com/soedinglab/pdbx
-- pdb2fasta (https://zhanggroup.org/pdb2fasta)
-- tensorflow=1.14
-
 
 ### Supporting databases for DPAM:
 
