@@ -24,7 +24,7 @@ Python3
 
 The databases necessary for DPAM, along with all supporting files, are available for download from our lab server at [https://conglab.swmed.edu/DPAM/](https://conglab.swmed.edu/DPAM/). The compressed file size is approximately 89GB, while the size of the databases when uncompressed reaches around 400GB. It is essential to ensure that you have sufficient hard drive space to accommodate these databases. Additionally, due to their substantial size, downloading these databases might require several hours to a few days, depending on your internet connection speed.
 
-After downloading the databases, please decompress files. All databases and supporting files should be put in the same directory and the directory should be provided to `run_dpam_docker.py` 
+After downloading the databases.tar.gz, please decompress the file. And the directory(`[download_path]/databases`) must be provided to `run_dpam_docker.py` as `--databases_dir`
     
 ## Installation
     docker pull conglab/dpam:latest
