@@ -101,7 +101,7 @@ if __name__ == "__main__":
     parser.add_argument("--databases_dir", help="Path to the databases directory to mount (required)", required=True)
     parser.add_argument("--input_dir", help="Path to the input directory to mount (required)", required=True)
     parser.add_argument("--dataset", help="Name of dataset (required)", required=True)
-    parser.add_argument("--image_name", help="Image name", default="dpam")
+    parser.add_argument("--image_name", help="Image name", default="conglab/dpam")
     parser.add_argument("--threads", type=int, default=os.cpu_count(), help="Number of threads. Default is to use all CPUs")
     parser.add_argument("--log_file", help="File to save the logs")
 
