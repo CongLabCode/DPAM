@@ -1,5 +1,5 @@
 #!/opt/conda/bin/python
-import os, sys, subprocess
+import os, sys, subprocess,time
 def run_cmd(cmd):
     status = subprocess.run(cmd,shell = True).returncode
     if status == 0:
